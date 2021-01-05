@@ -18,7 +18,6 @@ class CreateTodosTable extends Migration
             $table->string('title', 100);
             $table->text('description');
             $table->integer('completed');
-            $table->timestamp('due_date');
             $table->timestamps();
         });
     }
