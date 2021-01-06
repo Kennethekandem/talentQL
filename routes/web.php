@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TodoController;
-use App\Models\Todo;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +15,4 @@ use App\Models\Todo;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::prefix('todos')->group(function() {
-    Route::get('/all', [TodoController::class, 'all']);
-
-    Route::post('/create', [TodoController::class, 'create']);
-
-    Route::get('/todo/{todo}', function(Todo $todo) {
-        return response()->json($todo);
-    });
 });
