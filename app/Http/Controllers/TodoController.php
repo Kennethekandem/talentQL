@@ -22,12 +22,11 @@ class TodoController extends Controller
         $create = Todo::create(array(
             'title' => $request['title'],
             'description' => $request['description'],
-            'completed' => 0,
-            'due_date' => now()
+            'completed' => 0
         ));
 
         if($create) {
-            return response()->json('Todo Created', 200);
+            return response()->json($create);
         }
     }
 }

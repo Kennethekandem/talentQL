@@ -13,6 +13,6 @@ class Todo extends Model
     public $primaryKey = 'id';
 
     protected $fillable = [
-        'title', 'desscription', 'completed'
+        'title', 'description', 'completed'
     ];
 }
